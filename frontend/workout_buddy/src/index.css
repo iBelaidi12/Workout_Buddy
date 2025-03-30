@@ -1,0 +1,180 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+  --dark-color-containers : #17191a;
+  --dark-color-bg : #1f2223;
+}
+body {
+  background-color: var(--dark-color-bg);
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: var(--dark-color-containers);
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.workout-details {
+  background: var(--dark-color-containers);
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+  font-weight: bold;
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: white;
+}
+.workout-details span:first-of-type {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 6px;
+}
+.workout-details span:nth-of-type(2) {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  cursor: pointer;
+  padding: 6px;
+}
+.workout-details .trash-icon, .pen-icon {
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+
+/* new workout form */
+.create label, .create h3{
+  color: white;
+}
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color : #2b2a33; 
+  color: white;
+  border-color: #3e3e3e;
+  outline: none;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error{
+  border: 1px solid var(--error);
+}
+
+
+
+/* modal  */
+body.active{
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.inactive{
+  display: none;
+}
+
+
+.modal .close-modal{
+  z-index: 3;
+  position: absolute;
+  top: 1.5%;
+  right: 3.5%;
+  font-size: xx-large;
+  color: rgba(255, 255, 255, 0.532);
+}
+.modal.close-modal:hover{
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.modal .inner-container{
+  z-index: 2;
+  position: absolute;
+  top: 3%;
+  left: 18%;
+  background-color: #191919;
+  border: hsla(0, 0%, 100%, 0.068) solid 2px; 
+  width: 1000px;
+  height: 850px;
+  padding-top: 15px;
+}
+
+.modal .black-bg{
+  z-index: 2;
+  width: 10000em;
+  height: 10000em;
+  background-color: #000000;
+  opacity: 70%;
+  position: absolute;
+  top: -200%;
+  left: -50%;
+}
